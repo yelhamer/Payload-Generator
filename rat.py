@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 #Github: https://github.com/yelhamer
 #
-#Email: yelhamer@protonmail.com
-#
 from os import system
 os = raw_input("What is this payload for [W]indows/[L]inux/[A]ndroid: ")
 ip = raw_input("Enter your IP: ")
