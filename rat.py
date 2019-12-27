@@ -36,4 +36,3 @@ f.write(handler_options)
 f.close()
 handler = "msfconsole -r {0}".format(handler_file)
 system(handler)
-print"Hope you got someone ;)"
